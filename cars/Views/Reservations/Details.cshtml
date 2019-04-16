@@ -1,0 +1,51 @@
+﻿@model cars.Models.Reservation
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reservation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name_car)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name_car)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.car_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.car_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type_car)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type_car)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Release_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Release_Date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
